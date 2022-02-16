@@ -22,6 +22,7 @@ export class Hash {
 
 export class Password {
 	private hashObj: Hash;
+	private plain?: string;
 	hash: string;
 
 
@@ -41,7 +42,11 @@ export class Password {
 
 
 	constructor(value: string, store_plain: boolean = false) {
-		let createdHash: Hash = new Hash(value, store_plain);
+		if (store_plain == true) {
+			this.plain = value;
+		}
+		
+		let createdHash: Hash = new Hash(value);
 		this.hashObj = createdHash;
 		this.hash = createdHash.value;
 	}
