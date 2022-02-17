@@ -7,7 +7,7 @@ let alphabet: Array<string> = [
 	's', 't', 'u', 'v', 'w', 'x',
 	'y', 'z'
 ];
-let specials: Array<string> = ['`', '~', '!', '@', '#', '$', '%', '^', '&', '*', '-', '_', '+', '=', '?'];
+let specials: Array<string> = ['`', '!', '@', '#', '$', '%', '^', '&', '*', '-', '_', '+', '=', '?'];
 let numerics: Array<string> = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 let alphanumeric: Array<string> = [];
 let characters: Array<string> = [];

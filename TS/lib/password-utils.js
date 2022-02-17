@@ -18,7 +18,10 @@ class Hash {
 exports.Hash = Hash;
 class Password {
     constructor(value, store_plain = false) {
-        let createdHash = new Hash(value, store_plain);
+        if (store_plain == true) {
+            this.plain = value;
+        }
+        let createdHash = new Hash(value);
         this.hashObj = createdHash;
         this.hash = createdHash.value;
     }
