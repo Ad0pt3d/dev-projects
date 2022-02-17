@@ -20,8 +20,6 @@ consonants = [
 affirmatives = ['y', 'yes']
 negatives = ['n', 'no']
 
-def is_decimal(num):  # function to streamline checking decimals
-	return not num == math.floor(num)
 
 def run():  # make a function and use recursion to repeat the program
 	questions = [  # preset questions to ask, for efficient code
@@ -82,7 +80,7 @@ def run():  # make a function and use recursion to repeat the program
 				except:
 					print('Provided input is not a valid float.\n')
 				else:
-					if is_decimal(float(_input)):
+					if not float(_input) == math.floor(float(_input)):
 						print("That works!\n")
 					else:
 						print('This number is not a decimal.\n')
